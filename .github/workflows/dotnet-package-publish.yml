@@ -1,0 +1,29 @@
+name: NuGet Generation
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Update or Create NuGet package
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.201
+      - name: Install dependencies RKSoftware.Packages.ViewModel.EFExtensions
+        run: dotnet restore RKSoftware.Packages.ViewModel.EFExtensions
+
+      - name: Build ViewModel project package
+        run: dotnet build RKSoftware.Packages.ViewModel.EFExtensions --configuration Release --no-restore
+
+      - name: Push generated RKSoftware.Packages.ViewModel.EFExtensions to NuGet repository
+        run: dotnet nuget push ./RKSoftware.Packages.ViewModel.EFExtensions/bin/Release/*.nupkg --skip-duplicate --no-symbols true --api-key ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json

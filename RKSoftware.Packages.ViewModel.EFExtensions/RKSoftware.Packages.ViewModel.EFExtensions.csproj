@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <Authors>Konstantin Koryakov, Sergei Zuenok</Authors>
+    <Company>RK Software Systems</Company>
+    <Description>This package contains extension that have link to Entity Framework Core and supposed to be used with Base View model package</Description>
+    <Copyright>RK Software Systems</Copyright>
+    <PackageProjectUrl>https://github.com/rk-software-systems/rk-dn-vm-ef-extensions</PackageProjectUrl>
+    <PackageIcon>company-logo.png</PackageIcon>
+    <RepositoryUrl>https://github.com/rk-software-systems/rk-dn-vm-ef-extensions</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Product>View Models Entity Frameworks linked extensions</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.4" />
+    <PackageReference Include="RKSoftware.Packages.ViewModel" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\company-logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
