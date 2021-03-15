@@ -55,7 +55,7 @@ namespace RKSoftware.Packages.ViewModel.EFExtensions.Extensions
 
             requestModel.PageSize++;
 
-            baseList.SetNext(!(baseList.Data.Count < baseList.PageSize));
+            baseList.SetNext(baseList.Data.Count > baseList.PageSize);
         }
     }
 }
