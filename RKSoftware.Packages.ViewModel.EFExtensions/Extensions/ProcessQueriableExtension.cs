@@ -47,8 +47,6 @@ namespace RKSoftware.Packages.ViewModel.EFExtensions.Extensions
             baseList.PageNumber = requestModel.PageNumber;
             baseList.PageSize = requestModel.PageSize;
 
-            requestModel.PageSize++;
-
             baseList.Data = (await queriable
                     .ApplyList(requestModel, isSorting)
                     .ToListAsync())
