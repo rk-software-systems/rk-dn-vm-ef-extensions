@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <Version>1.0.2</Version>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <Version>1.0.3</Version>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
     <Authors>Konstantin Koryakov, Sergei Zuenok</Authors>
     <Company>RK Software Systems</Company>
     <Description>This package contains extension that have link to Entity Framework Core and supposed to be used with Base View model package</Description>
