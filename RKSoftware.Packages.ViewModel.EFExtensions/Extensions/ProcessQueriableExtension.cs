@@ -47,15 +47,15 @@ namespace RKSoftware.Packages.ViewModel.EFExtensions.Extensions
             baseList.PageNumber = requestModel.PageNumber;
             baseList.PageSize = requestModel.PageSize;
 
+            requestModel.PageSize++;
+
             baseList.Data = (await queriable
                     .ApplyList(requestModel, isSorting)
                     .ToListAsync())
                 .Select(selector)
                 .ToList();
 
-            requestModel.PageSize++;
-
-            baseList.SetNext(baseList.Data.Count > baseList.PageSize);
+            baseList.CheckAndSetNext();
         }
     }
 }
