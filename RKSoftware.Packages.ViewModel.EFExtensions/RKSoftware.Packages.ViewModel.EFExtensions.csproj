@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.8" />
-    <PackageReference Include="RKSoftware.Packages.ViewModel" Version="1.0.4" />
+    <PackageReference Include="RKSoftware.Packages.ViewModel" Version="1.0.5" />
   </ItemGroup>
 
   <ItemGroup>
