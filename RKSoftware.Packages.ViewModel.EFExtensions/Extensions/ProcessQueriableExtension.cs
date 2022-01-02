@@ -14,8 +14,7 @@ namespace RKSoftware.Packages.ViewModel.EFExtensions.Extensions
         /// <param name="queriable"></param>
         /// <param name="requestModel"></param>
         /// <param name="selector"></param>
-        /// <typeparam name="TInput"></typeparam>
-        [Obsolete("ProcessQueriable is obsolete. Use ToListModel method.")]
+        /// <typeparam name="TInput"></typeparam>        
         public static async Task ProcessQueriable<TInput, TOutput>(
             this BaseListResultViewModel<TOutput> baseList, IQueryable<TInput> queriable,
             BaseListRequestViewModel requestModel,
@@ -33,8 +32,7 @@ namespace RKSoftware.Packages.ViewModel.EFExtensions.Extensions
         /// <param name="isSorting"></param>
         /// <param name="selector"></param>
         /// <typeparam name="TInput"></typeparam>
-        /// <exception cref="ArgumentNullException"></exception>
-        [Obsolete("ProcessQueriable is obsolete. Use ToListModel method.")]
+        /// <exception cref="ArgumentNullException"></exception>        
         public static async Task ProcessQueriable<TInput, TOutput>(
             this BaseListResultViewModel<TOutput> baseList, IQueryable<TInput> queriable,
             BaseListRequestViewModel requestModel, bool isSorting,
