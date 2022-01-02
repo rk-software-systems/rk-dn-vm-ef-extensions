@@ -7,6 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RKSoftware.Packages.ViewMod
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F99D5632-D643-4F02-ACDA-895F6193BD94}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		.github\workflows\codeql-analysis.yml = .github\workflows\codeql-analysis.yml
 		company-logo.png = company-logo.png
 		.github\workflows\dotnet-package-publish.yml = .github\workflows\dotnet-package-publish.yml

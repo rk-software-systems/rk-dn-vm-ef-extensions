@@ -15,6 +15,7 @@ namespace RKSoftware.Packages.ViewModel.EFExtensions.Extensions
         /// <param name="requestModel"></param>
         /// <param name="selector"></param>
         /// <typeparam name="TInput"></typeparam>
+        [Obsolete("ProcessQueriable is obsolete. Use ToListModel method.")]
         public static async Task ProcessQueriable<TInput, TOutput>(
             this BaseListResultViewModel<TOutput> baseList, IQueryable<TInput> queriable,
             BaseListRequestViewModel requestModel,
@@ -33,15 +34,21 @@ namespace RKSoftware.Packages.ViewModel.EFExtensions.Extensions
         /// <param name="selector"></param>
         /// <typeparam name="TInput"></typeparam>
         /// <exception cref="ArgumentNullException"></exception>
-        public static async Task ProcessQueriable<TInput, TOUtput>(
-            this BaseListResultViewModel<TOUtput> baseList, IQueryable<TInput> queriable,
+        [Obsolete("ProcessQueriable is obsolete. Use ToListModel method.")]
+        public static async Task ProcessQueriable<TInput, TOutput>(
+            this BaseListResultViewModel<TOutput> baseList, IQueryable<TInput> queriable,
             BaseListRequestViewModel requestModel, bool isSorting,
-            Func<TInput, TOUtput> selector)
-            where TOUtput : class
+            Func<TInput, TOutput> selector)
+            where TOutput : class
         {
             if (requestModel == null)
             {
                 throw new ArgumentNullException(nameof(requestModel));
+            }
+
+            if(baseList == null)
+            {
+                throw new ArgumentNullException(nameof(baseList));
             }
 
             baseList.PageNumber = requestModel.PageNumber;
