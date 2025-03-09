@@ -4,6 +4,10 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyVersion>8.0.1.0</AssemblyVersion>
+    <FileVersion>8.0.1.0</FileVersion>
+    <Version>8.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -20,12 +24,8 @@
     <PackageProjectUrl>https://github.com/rk-software-systems/rk-dn-vm-ef-extensions</PackageProjectUrl>
     <PackageIcon>company-logo.png</PackageIcon>
     <RepositoryUrl>https://github.com/rk-software-systems/rk-dn-vm-ef-extensions</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Product>View Models Entity Frameworks linked extensions</Product>
-    <AssemblyVersion>8.0.1.0</AssemblyVersion>
-    <FileVersion>8.0.1.0</FileVersion>
-    <Version>8.0.1</Version>
+    <RepositoryType>git</RepositoryType>   
+    <Product>View Models Entity Frameworks linked extensions</Product>   
     <PackageLicenseExpression>MIT OR Apache-2.0</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
