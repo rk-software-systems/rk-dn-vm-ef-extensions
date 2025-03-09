@@ -13,7 +13,8 @@ public static class ProcessQueryableExtension
     /// <param name="selector"></param>
     /// <typeparam name="TInput"></typeparam>        
     public static async Task ProcessQueryable<TInput, TOutput>(
-        this BaseListResultViewModel<TOutput> baseList, IQueryable<TInput> queryable,
+        this BaseListResultViewModel<TOutput> baseList,
+        IQueryable<TInput> queryable,
         BaseListRequestViewModel requestModel,
         Func<TInput, TOutput> selector) where TOutput : class
     {
@@ -30,8 +31,10 @@ public static class ProcessQueryableExtension
     /// <typeparam name="TInput"></typeparam>
     /// <exception cref="ArgumentNullException"></exception>        
     public static async Task ProcessQueryable<TInput, TOutput>(
-        this BaseListResultViewModel<TOutput> baseList, IQueryable<TInput> queryable,
-        BaseListRequestViewModel requestModel, bool isSorting,
+        this BaseListResultViewModel<TOutput> baseList, 
+        IQueryable<TInput> queryable,
+        BaseListRequestViewModel requestModel, 
+        bool isSorting,
         Func<TInput, TOutput> selector) where TOutput : class
     {
         ArgumentNullException.ThrowIfNull(requestModel, nameof(requestModel));
